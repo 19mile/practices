@@ -1,0 +1,150 @@
+#outline {
+    position: relative;
+    margin-left: 50%;
+    left: -100px;
+    top: 100px;
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+}
+
+
+/*定义动画二  */
+
+@keyframes theUl2 {
+    0% {
+        transform: rotateX(-45deg) rotateY(0) rotateZ(45deg) translate3d(200px, 48px, 200px);
+    }
+    20% {
+        transform: rotateY(720deg) rotateX(720deg) rotateZ(450deg) translate3d(-90px, 70px, 180px);
+    }
+    30% {
+        transform: rotateY(0) rotateX(180deg) rotateZ(890deg) translate3d(56px, 200px, -40px);
+    }
+    40% {
+        transform: rotateY(720deg) rotateX(360deg) rotateZ(45deg) translate3d(-200px, -320px, -40px);
+    }
+    50% {
+        transform: rotateY(0) rotateX(482deg) rotateZ(180deg) translate3d(200px, 220px, 400px);
+    }
+    60% {
+        transform: rotateY(720deg) rotateX(380deg) rotateZ(290deg) translate3d(-150px, -200px, -200px);
+    }
+    70% {
+        transform: rotateY(0) rotateX(408deg) rotateZ(360deg) translate3d(200px, 220px, 400px);
+    }
+    80% {
+        transform: rotateY(720deg) rotateX(360deg) rotateZ(250deg) translate3d(-150px, -200px, -200px);
+    }
+    90% {
+        transform: rotateY(0) rotateX(270deg) rotateZ(140deg) translate3d(-90px, 70px, 180px);
+    }
+    100% {
+        transform: rotateY(720deg) rotateX(90deg) rotateZ(45deg) translate3d(200px, -120px, -400px);
+    }
+}
+
+
+/*定义动画  */
+
+@keyframes theUl {
+    0% {
+        transform: rotateY(0) rotateX(-45deg) rotateZ(45deg);
+    }
+    20% {
+        transform: rotateY(720deg) rotateX(720deg) rotateZ(450deg);
+    }
+    30% {
+        transform: rotateY(0) rotateX(180deg) rotateZ(890deg);
+    }
+    40% {
+        transform: rotateY(720deg) rotateX(360deg) rotateZ(45deg);
+    }
+    50% {
+        transform: rotateY(0) rotateX(482deg) rotateZ(180deg);
+    }
+    60% {
+        transform: rotateY(720deg) rotateX(380deg) rotateZ(290deg);
+    }
+    70% {
+        transform: rotateY(0) rotateX(408deg) rotateZ(360deg);
+    }
+    80% {
+        transform: rotateY(720deg) rotateX(360deg) rotateZ(250deg);
+    }
+    90% {
+        transform: rotateY(0) rotateX(270deg) rotateZ(140deg);
+    }
+    100% {
+        transform: rotateY(720deg) rotateX(90deg) rotateZ(45deg);
+    }
+}
+
+ul {
+    transform-style: preserve-3d;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: rotateY(0) rotateX(-45deg) rotateZ(45deg);
+    animation: theUl 50s infinite linear;
+}
+
+ul li {
+    list-style: none;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+}
+
+ul li img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* 绕X旋转90度，并沿Y平移-100px成为顶部 */
+
+ul li:nth-of-type(1) {
+    background: #ac2;
+    transform: translateY(-100px) rotateX(90deg);
+}
+
+
+/* 绕X旋转-90度，并沿Y平移100px成为底部 */
+
+ul li:nth-of-type(2) {
+    background: #54d;
+    transform: translateY(100px) rotateX(-90deg);
+}
+
+
+/* 绕Y旋转-90度，并沿X平移100px成为右部 */
+
+ul li:nth-of-type(3) {
+    background: #589;
+    transform: translateX(100px) rotateY(90deg);
+}
+
+
+/* 绕Y旋转-90度，并沿X平移-100px成为左部 */
+
+ul li:nth-of-type(4) {
+    background: #47d;
+    transform: translateX(-100px) rotateY(-90deg);
+}
+
+
+/* 沿Z平移100px成为正面 */
+
+ul li:nth-of-type(5) {
+    background: #af8;
+    transform: translateZ(100px);
+}
+
+
+/* 沿Z平移-100px成为正面 */
+
+ul li:nth-of-type(6) {
+    background: #79c;
+    transform: translateZ(-100px);
+}
